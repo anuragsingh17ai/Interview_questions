@@ -1,0 +1,22 @@
+//https://leetcode.com/problems/move-zeroes/submissions/
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int count=0;
+        for(auto i: nums)
+            if(i==0)
+                count++;
+        int k=0;
+        while(count>k++)
+        {
+            for(int i=0;i<nums.size()-k;i++)
+            {
+                if(nums[i]==0)
+                {
+                    swap(nums[i],nums[i+1]);
+                }
+            }
+        }
+        
+    }
+};
